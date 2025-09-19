@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPF_Lab04.PedidosPorFechasView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Lab04"
+        mc:Ignorable="d"
+        Title="PedidosPorFechasView" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+            <Label Content="Fecha Inicio:" VerticalAlignment="Center"/>
+            <DatePicker x:Name="dpInicio" Width="150" Margin="5,0"/>
+
+            <Label Content="Fecha Fin:" VerticalAlignment="Center"/>
+            <DatePicker x:Name="dpFin" Width="150" Margin="5,0"/>
+
+            <Button Content="Buscar" Width="100" Margin="10,0" Click="BtnBuscar_Click"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dgPedidos" Grid.Row="1" AutoGenerateColumns="True"/>
+    </Grid>
+</Window>
