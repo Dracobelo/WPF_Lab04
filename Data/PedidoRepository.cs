@@ -5,7 +5,7 @@ namespace Data
 {
     public class PedidoRepository
     {
-        private readonly string connectionString = "Server=LAB1502-009\\SQLEXPRESS;Database=NeptunoDBB;User Id=draco;Password=hola1234;Encrypt=True;TrustServerCertificate=True;";
+        private readonly string connectionString = "Server=LAB1502-009\\SQLEXPRESS;Database=Neptuno_DBB;User Id=userHugo;Password=hola1234;Encrypt=True;TrustServerCertificate=True;";
 
 
         public DataTable ListarPedidosPorFechas(DateTime fechaInicio, DateTime fechaFin)

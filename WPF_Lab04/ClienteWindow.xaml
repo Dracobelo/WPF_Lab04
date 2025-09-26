@@ -1,0 +1,77 @@
+﻿<Window x:Class="WPF_Lab04.ClienteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Lab04"
+        mc:Ignorable="d"
+        Title="ClienteWindow" Height="450" Width="800">
+    <DockPanel Margin="10">
+        <!-- Barra superior con botones -->
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,0,0,10">
+            <Button Content="Buscar Clientes" Width="120" Margin="0,0,10,0" Click="BtnBuscar_Click"/>
+            <Button Content="Insertar" Width="100" Margin="0,0,10,0" Click="BtnInsertar_Click"/>
+            <Button Content="Actualizar" Width="100" Margin="0,0,10,0" Click="BtnActualizar_Click"/>
+            <Button Content="Eliminar" Width="100" Click="BtnEliminar_Click"/>
+        </StackPanel>
+
+        <!-- Panel con TextBox -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Vertical" Margin="0,0,0,10">
+            <WrapPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="ID Cliente"/>
+                    <TextBox x:Name="txtId" Width="100"/>
+                </StackPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Compañía"/>
+                    <TextBox x:Name="txtCompania" Width="150"/>
+                </StackPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Contacto"/>
+                    <TextBox x:Name="txtContacto" Width="150"/>
+                </StackPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Cargo"/>
+                    <TextBox x:Name="txtCargo" Width="120"/>
+                </StackPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Dirección"/>
+                    <TextBox x:Name="txtDireccion" Width="150"/>
+                </StackPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Ciudad"/>
+                    <TextBox x:Name="txtCiudad" Width="120"/>
+                </StackPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Región"/>
+                    <TextBox x:Name="txtRegion" Width="100"/>
+                </StackPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Cod. Postal"/>
+                    <TextBox x:Name="txtCodPostal" Width="100"/>
+                </StackPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="País"/>
+                    <TextBox x:Name="txtPais" Width="100"/>
+                </StackPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Teléfono"/>
+                    <TextBox x:Name="txtTelefono" Width="120"/>
+                </StackPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Fax"/>
+                    <TextBox x:Name="txtFax" Width="120"/>
+                </StackPanel>
+
+            </WrapPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="10">
+                <TextBox x:Name="txtBuscar" Width="200" Margin="0,0,10,0"/>
+                <Button Content="Buscar" Width="100" Click="BtnBuscarPorNombre_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <!-- DataGrid -->
+        <DataGrid x:Name="dgClientes" AutoGenerateColumns="True" SelectionChanged="dgClientes_SelectionChanged"/>
+    </DockPanel>
+</Window>

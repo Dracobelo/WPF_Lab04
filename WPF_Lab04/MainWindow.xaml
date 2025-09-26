@@ -16,7 +16,9 @@
             <Button x:Name="btnProveedores" Content="Buscar Proveedores" Width="200" Height="40" Margin="7"
                         Click="btnProveedores_Click"/>
 
-                <Button Content="Pedidos por Fechas" Width="200" Height="40" Margin="7" Click="btnPedidosFechas_Click"/>
+            <Button Content="Pedidos por Fechas" Width="200" Height="40" Margin="7" Click="btnPedidosFechas_Click"/>
+            <Button Content="Crud Clientes" Width="200" Height="40" Margin="7" Click="btnClientes_Click"/>
+
 
         </StackPanel>
         </Grid>

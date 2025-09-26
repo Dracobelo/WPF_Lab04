@@ -36,6 +36,12 @@ namespace WPF_Lab04
             PedidosPorFechasView win = new PedidosPorFechasView();
             win.ShowDialog();
         }
+
+        private void btnClientes_Click(object sender, RoutedEventArgs e)
+        {
+            ClienteWindow win = new ClienteWindow();
+            win.ShowDialog();
+        }
     }
 
 }
